@@ -110,6 +110,23 @@ describe "Level 3" do
 
       # puts all the values in the school. NOTE: If this takes too long, skip it!
       
+      def get_values(hsh)
+        lst = []
+        hsh.each do |key, val|
+          if val.instance_of?([].class)
+            val.each do |elt|
+              lst += get_values(elt)
+            end
+          else
+            lst << val
+          end
+        end
+        lst
+      end
+
+      get_values(school).each do |elt|
+        puts elt
+      end
     end
   end
 end
