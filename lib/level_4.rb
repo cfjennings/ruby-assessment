@@ -1,5 +1,4 @@
 class Array
-
 	#not very general, but works on the school object
 	#assumes the array contains hashes only
 	#finds and returns the hash where the given key matches the requested value
